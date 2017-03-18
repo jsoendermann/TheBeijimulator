@@ -10,6 +10,8 @@
 		3D0F23EA1E7ACC3700BD5DBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F23E91E7ACC3700BD5DBC /* AppDelegate.swift */; };
 		3D0F23EC1E7ACC3700BD5DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0F23EB1E7ACC3700BD5DBC /* Assets.xcassets */; };
 		3D0F23EF1E7ACC3700BD5DBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D0F23ED1E7ACC3700BD5DBC /* MainMenu.xib */; };
+		3D594D4A1E7CE36400BD0570 /* AQIFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D594D491E7CE36400BD0570 /* AQIFetcher.swift */; };
+		3D594D4C1E7CE45000BD0570 /* BeijimulationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D594D4B1E7CE45000BD0570 /* BeijimulationWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		3D0F23EB1E7ACC3700BD5DBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D0F23EE1E7ACC3700BD5DBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		3D0F23F01E7ACC3700BD5DBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D594D491E7CE36400BD0570 /* AQIFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQIFetcher.swift; sourceTree = "<group>"; };
+		3D594D4B1E7CE45000BD0570 /* BeijimulationWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeijimulationWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 				3D0F23EB1E7ACC3700BD5DBC /* Assets.xcassets */,
 				3D0F23ED1E7ACC3700BD5DBC /* MainMenu.xib */,
 				3D0F23F01E7ACC3700BD5DBC /* Info.plist */,
+				3D594D491E7CE36400BD0570 /* AQIFetcher.swift */,
+				3D594D4B1E7CE45000BD0570 /* BeijimulationWindow.swift */,
 			);
 			path = Beijimulator;
 			sourceTree = "<group>";
@@ -130,6 +136,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D0F23EA1E7ACC3700BD5DBC /* AppDelegate.swift in Sources */,
+				3D594D4A1E7CE36400BD0570 /* AQIFetcher.swift in Sources */,
+				3D594D4C1E7CE45000BD0570 /* BeijimulationWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +252,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Beijimulator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.primlo.Beijimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -257,6 +266,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Beijimulator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.primlo.Beijimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -282,6 +292,7 @@
 				3D0F23F51E7ACC3700BD5DBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
