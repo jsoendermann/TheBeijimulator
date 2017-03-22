@@ -9,14 +9,16 @@
 import Cocoa
 
 
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    // We cap the AQI value so that the screen stays visible.
+    // The AQI data we get are computed using the Chinese
+    // formula so 300 seems like a reasonable value.
     static let AQI_MAXIMUM_VALUE = 300
 
     var window: NSWindow!
-    var statusBarItem: NSStatusItem!
+    var statusItem: NSStatusItem!
     var beijimulateMenuItem: NSMenuItem!
     
     var aqiFetcher: AQIFetcher?
@@ -32,12 +34,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(beijimulateMenuItem)
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(quit(sender:)), keyEquivalent: "q"))
         
-        statusBarItem = NSStatusBar.system().statusItem(withLength: -1)
-        statusBarItem.menu = menu
+        statusItem = NSStatusBar.system().statusItem(withLength: -1)
+        statusItem.menu = menu
         
         aqiFetcher = AQIFetcher()
         aqiFetcher?.subscribe(callback: { aqi in
-            self.statusBarItem.title = "\(aqi)"
+            self.statusItem.title = "\(aqi)"
             
             let aqiCapped = min(aqi, AppDelegate.AQI_MAXIMUM_VALUE)
             

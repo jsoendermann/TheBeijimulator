@@ -31,6 +31,7 @@ class AQIFetcher {
     }
     
     @objc func updateAQI() {
+        print("Updating AQI...")
         let bjAQWebsiteUrlString = "http://zx.bjmemc.com.cn/?timestamp=\(Int(Date().timeIntervalSince1970 * 1000))"
         guard let url = URL(string: bjAQWebsiteUrlString),
             let html = try? String(contentsOf: url, encoding: .utf8) else { return }
